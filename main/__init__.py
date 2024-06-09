@@ -1,14 +1,17 @@
-import pyrogram
-from pyrogram import Client, filters
-from pyrogram.errors import UserAlreadyParticipant, InviteHashExpired, UsernameNotOccupied
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+#Github.com/Vasusen-code
 
-import time
-import os
-import threading
-import json
-from os import environ
+from pyrogram import Client
 
+from telethon.sessions import StringSession
+from telethon.sync import TelegramClient
+
+from decouple import config
+import logging, time, sys
+
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+                    level=logging.WARNING)
+
+# variables
 API_ID = config("API_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
 BOT_TOKEN = config("BOT_TOKEN", default=None)
