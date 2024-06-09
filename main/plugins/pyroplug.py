@@ -4,9 +4,8 @@ import time
 import os
 import threading
 import json
-from os import environ
 
-from .. import bot as Drone
+from os import environ
 from main.plugins.progress import progress_for_pyrogram
 from main.plugins.helpers import screenshot
 
